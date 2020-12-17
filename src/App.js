@@ -51,7 +51,7 @@ function App() {
           <form className={'root'} noValidate autoComplete="off">
             <TextField onChange={(event)=> {
               const re = /[0-9A-F]*/g;
-              if(event.target.value.match(re)[0]){
+              if(event.target.value.match(re).length === 2 && event.target.value.match(re)[0]){
                 setHex(true);
                 setText(event.target.value)
               } else{
